@@ -41,3 +41,9 @@ variable "instance_type" {
   type = string
   default = null
 }
+
+variable "profile_permissions_boundary_arn" {
+  type = string
+  default = null
+  description = "ARN of the permissions boundary policy"
+}

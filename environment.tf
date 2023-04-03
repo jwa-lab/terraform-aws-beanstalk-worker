@@ -14,6 +14,8 @@ module "beanstalk" {
 
   description = "Worker environment for ${var.beanstalk_app_name}"
 
+  profile_permissions_boundary_arn = var.profile_permissions_boundary_arn
+
   beanstalk_settings = [
     {
       namespace = "aws:autoscaling:asg"
