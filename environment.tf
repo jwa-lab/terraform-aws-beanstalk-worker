@@ -33,6 +33,8 @@ module "beanstalk" {
       value = "/worker"
     },
   ]
+
+  beanstalk_env_vars = var.worker_env_vars
 }
 
 
