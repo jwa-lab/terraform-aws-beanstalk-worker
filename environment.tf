@@ -1,6 +1,6 @@
 module "beanstalk" {
   source = "jwa-lab/beanstalk/aws"
-  version = "0.1.0"
+  version = "0.1.1"
 
   beanstalk_env_name = var.beanstalk_env_name
   beanstalk_app_name = var.beanstalk_app_name
@@ -15,6 +15,7 @@ module "beanstalk" {
   description = "Worker environment for ${var.beanstalk_app_name}"
 
   profile_permissions_boundary_arn = var.profile_permissions_boundary_arn
+  instance_type = var.instance_type
 
   beanstalk_settings = [
     {

@@ -39,7 +39,8 @@ variable "solution_stack_name" {
 
 variable "instance_type" {
   type = string
-  default = null
+  description = "An AWS instance type to use for the environment. Defaults to t4g.small for production environments and t4g.micro for non-production environments"
+  default = "t4g.micro"
 }
 
 variable "profile_permissions_boundary_arn" {
