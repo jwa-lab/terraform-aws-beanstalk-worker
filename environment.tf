@@ -21,12 +21,12 @@ module "beanstalk" {
     {
       namespace = "aws:autoscaling:asg"
       name = "MaxSize"
-      value = var.ha ? 2 : 1
+      value = var.max_instance_count != null ? var.max_instance_count : var.ha ? 2 : 1
     },
     {
       namespace = "aws:autoscaling:asg"
       name = "MinSize"
-      value = var.ha ? 2 : 1
+      value = var.min_instance_count != null ? var.min_instance_count : var.ha ? 2 : 1
     },
     {
       namespace = "aws:elasticbeanstalk:sqsd"

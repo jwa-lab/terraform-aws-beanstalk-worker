@@ -48,3 +48,15 @@ variable "profile_permissions_boundary_arn" {
   default = null
   description = "ARN of the permissions boundary policy"
 }
+
+variable "min_instance_count" {
+  type = number
+  default = null
+  description = "Min instance count"
+}
+
+variable "max_instance_count" {
+  type = number
+  default = null
+  description = "Max instance count"
+}
