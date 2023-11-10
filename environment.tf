@@ -1,6 +1,6 @@
 module "beanstalk" {
   source = "jwa-lab/beanstalk/aws"
-  version = "0.1.1"
+  version = "0.1.2"
 
   beanstalk_env_name = var.beanstalk_env_name
   beanstalk_app_name = var.beanstalk_app_name
